@@ -1,0 +1,96 @@
+body {
+    background: rgb(43,70,70);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*Titulo del header*/
+.titulo{
+    display: flex;
+    margin: 3rem;
+}
+/*Barra de navegacion*/
+.navigation {
+    display: flex; /*Utiliza felxbox para organizar los elementos hijos (items de navegacion) en una fila flexible*/
+    gap: 3rem; /*Establece un espacio de 3 rem entre cada elemento hijo dentro del contenedor flex*/
+    list-style: none; /*Elimina los puntos de lista predeterminado de los elementos de la lista*/
+    justify-content: flex-end; /*Alinea los elementos hijos al final del contenedor flex, a la derecha. */
+    margin: 0 3rem; /*Establece un margen de 0 en la parte superior e inferior y de 3 rem en los lados iz<quierdo y derecho */
+}
+
+/*Enlaces de la barra de navegacion configurados como si fueran botones*/
+.navigation li {
+    font-size: 1rem;
+    width: 100px;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: #f0eaea1a;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/*Estilo de los enlaces de la barra de navegacio*/
+
+
+
+a{
+    text-decoration: none; /*Elimina el subrayado predeterminado de los enlaces*/
+    color: rgb(215, 211, 211); /*Establece el color del texto de los enlaces a negro*/
+}
+
+.sobremi{
+    display: flex;
+    justify-content: center;
+}
+
+.container-sobremi{
+    display: flex;
+    width: 50%; /*ancho*/
+    padding: 2rem;
+    margin-top: 5rem; /*margen a lo alto*/
+    line-height: 2.5rem; /*Espacio entre los parrafos del texto*/
+    font-size: large; /*Tamaño de la fuente*/
+    color: azure;
+}
+
+/* Celular (Pantalla pequeña, hasta 767px) */
+/* Creamos una media query*/
+@media (max-width: 767px) {
+    .titulo{
+        justify-content: center;
+    }
+    .navigation {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .container-sobremi {
+        width: 100%;
+        padding: 1;
+        margin-top: 1rem; /*Margen a lo alto*/
+        line-height: 2.5rem; /*Espaciado entre los parrafos*/
+        font-size: small; /*Tamaño de la fuente*/
+    }
+}
+
+/*Tableta (Pantalla medianas, entre 768px y 1023px*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .titulo {
+        justify-content: center;
+    }
+    .navigation {
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
+/* Escritorio (Pantallas anchas, 1024 y superiores) */
+@media (min-width: 1024px) {
+    .titulo {
+        justify-content: flex-start;
+    }
+    .navigation {
+        gap: 3rem;
+        justify-content:  flex-end;
+        margin: 0 3rem;
+    }
+}
