@@ -4,6 +4,8 @@
     --colorh1-color: rgb(215,211,211);
 }
 body {
+    display: flex; /*Agregado en clase cuatro*/
+    flex-direction: column; /*Agregado en clase cuatro*/
     background: var(--body-bg-color);
     color: var(--text-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -38,50 +40,17 @@ h1, h2{
 }
 
 /*Estilo de los enlaces de la barra de navegacio*/
-
-
-
 a{
     text-decoration: none; /*Elimina el subrayado predeterminado de los enlaces*/
     color: rgb(215, 211, 211); /*Establece el color del texto de los enlaces a negro*/
 }
 
-.sobremi{
+/*Todo lo que contiene el main*/
+.main-container{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.container-sobremi{
-    display: flex;
-    width: 50%; /*ancho*/
-    padding: 2rem;
-    margin-top: 5rem; /*margen a lo alto*/
-    line-height: 2.5rem; /*Espacio entre los parrafos del texto*/
-    font-size: large; /*Tamaño de la fuente*/
-    color: azure;
-    gap: 5rem;
-    align-items: center;
-}
-
-.imagen-perfil{
-    border-radius: 50%;
-}
-
-.experiencia, .estudios{
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    color: azure;
-}
-
-.container-experiencia, .container-estudios{
-    width: 100%;
-    padding: 2rem;
-    margin-top: 5rem;
-    line-height: 2.5rem;
-    font-size: large;
-    margin: 8rem;
-}
 /*Medias query agrupadas*/
 /* Celular (Pantalla pequeña, hasta 767px) */
 /* Creamos una media query*/
@@ -94,27 +63,7 @@ a{
         gap: 1rem;
         align-items: center;
     }
-    .container-sobremi {
-        width: 100%;
-        padding: 1;
-        margin-top: 1rem; /*Margen a lo alto*/
-        line-height: 2.5rem; /*Espaciado entre los parrafos*/
-        font-size: small; /*Tamaño de la fuente*/
-        flex-direction: column;
-    }
-    .container-experiencia, .container-estudios{
-        width: 100%;
-        margin: 0rem;
-    }
-    
-    .experiencia, .estudios{
-        width: 100%;
-        padding: 1rem;
-        margin-top: 1rem;
-        font-size: small;
-    }
-}
-
+}    
 /*Tableta (Pantalla medianas, entre 768px y 1023px*/
 @media (min-width: 768px) and (max-width: 1023px) {
     .titulo {
@@ -123,9 +72,6 @@ a{
     .navigation {
         gap: 2rem;
         justify-content: center;
-    }
-    .experiencia, .estudios{
-        width: 75%;
     }
 }
 
@@ -138,8 +84,5 @@ a{
         gap: 3rem;
         justify-content:  flex-end;
         margin: 0 3rem;
-    }
-    .experiencia, .estudios{
-        width: 75%;
     }
 }
