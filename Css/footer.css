@@ -84,4 +84,18 @@ footer {
         margin-bottom: 5px; /* reducir el espacio debajo de la informacion */
         font-size: 14px; /* reducir el tamño de la fuente */
     }
+
+    .footer-social {
+        gap: 8px; /* Reducir el espacio entre los iconos */
+    }
+
+    .footer-social a {
+        width: 30px; /* Reducir aun mas el ancho del boton */
+        height: 30px; /* Reducir aun mas la altura del boton */
+    }
+
+    .footer-social svg {
+        width: 18px;
+        height: 18px;
+    }
 }
